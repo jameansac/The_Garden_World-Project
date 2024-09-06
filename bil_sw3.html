@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bill</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg text-uppercase">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold" href="index.html">The Garden World</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link px-lg-4 rounded" href="index.html">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="deluxe.html">Deluxe Room</a>
+                            <a class="dropdown-item" href="sweet.html">Sweet Room</a>
+                            <a class="dropdown-item" href="luxury.html">Luxury Room</a>
+                            <a class="dropdown-item" href="penthouse.html">Pent House</a>
+                            <a class="dropdown-item" href="villahouse.html">Villa House</a>
+                        </div>
+                    </li>
+                    <a class="nav-link px-lg-4 rounded" href="about.html">About Us</a>
+                    <a class="nav-link px-lg-4 rounded" href="contacts.html">Contacts</a>
+                    <a class="nav-link px-lg-4 rounded" href="member.html">Member</a>
+                    <a class="nav-link px-lg-4 rounded" href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="billing-container">
+            <div class="billing-form">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Hotel Bill</h3>
+                    </div>
+                    <div class="billing-image">
+                        <img src="image\p1.jpg" class="billing-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="txtNum3">Name</label>
+                            <input type="text" class="form-control" id="txtNum3" placeholder="Input your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNum1">Price</label>
+                            <input type="text" class="form-control" id="txtNum1" value="8500">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNum2">Day(s)</label>
+                            <input type="text" class="form-control" id="txtNum2" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtNum6">Check In</label>
+                            <input type="date" class="form-control" id="txtNum6">
+                        </div>
+
+
+
+                        <div class="form-group">
+                            Discount:<br>
+                            <label><input type="radio" name="discount" value="10"> 10%</label><br>
+                            <label><input type="radio" name="discount" value="20"> 20%</label><br>
+                            <label><input type="radio" name="discount" value="30"> 30%</label><br>
+                        </div>
+
+                        <div class="form-group">
+                            Payment Method:
+                            <select class="form-control" id="payType">
+                                <option value="SCB">SCB Online</option>
+                                <option value="KBank">KBank Online</option>
+                                <option value="Credit">Credit Card</option>
+                                <option value="QR">QR Code</option>
+                            </select>
+                            Payment amount :
+                            <input type="text" class="form-control" id="txtTotal">
+                        </div>
+                        <input type="button" name="disCal" value="Total price" id="btnCost"
+                            class="btn btn-warning btn-lg btn-block"><br>
+
+                        <div class="form-group">
+                            <h3 class="text-center">Detail</h3>
+                        </div>
+
+                        <div class="form-group">
+                            <p id="show5"></p>
+                            <p id="show1"></p>
+                            <p id="show2"></p>
+                            <p id="show3"></p>
+                            <p id="show6"></p>
+                            <p id="show7"></p>
+                            <p id="show4" class="text-success"></p>
+                            <button type="button" class="btn btn-success btn-lg btn-block" id="btnPay"
+                                onclick="saveinfo()">Pay</button>
+                            <script>
+                                function saveinfo() {
+                                    Swal.fire({
+
+                                        icon: "success",
+                                        title: "Payment Success",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    }).then(function () {
+                                        window.location.href = "index.html";
+
+                                    });
+
+                                }
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            $("#btnCost").click(function () {
+                var x = $("#txtNum1").val();
+                var y = $("#txtNum2").val();
+                var d = $('input[name="discount"]:checked').val();
+                var z = $("#txtNum3").val();
+                var a = $("#txtNum6").val();
+                var b = $("#payType").val();
+                var disCal = (x * y) * d / 100;
+                $("#show5").text("คุณ : " + z + "")
+                $("#show1").text("ยอดราคารวม : " + (x * y) + " บาท");
+                $("#show2").text("คุณได้ส่วนลด " + d + "% : " + disCal + " บาท");
+                $("#show3").text("ยอดชำระเงิน : " + ((x * y) - disCal) + " บาท");
+                $("#show6").text("วันที่เช็คอิน : " + a + "");
+                $("#show7").text("ช่องทางการชำระเงิน : " + b + "");
+
+                var pTotal = (x * y) - disCal;
+                $("#txtTotal").val(pTotal);
+            });
+            $("#btnPay").click(function () {
+                var p = $("#payType").val();
+                $("#show4").hide();
+                $("#show4").text("Total  : " + p + "Amount:");
+                $("#show4").fadeIn();
+                $("#show4").fadeOut();
+                $("#show4").fadeIn();
+                $("#show4").fadeOut();
+                $("#show4").fadeIn();
+                $("#show4").fadeOut();
+                $("#show4").fadeIn();
+            })
+
+
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

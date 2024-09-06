@@ -1,0 +1,422 @@
+body {
+    background-color: #EFEBE5;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto !important;
+}
+
+.dropdown-item{
+    background-color: hsl(21, 40%, 27%);
+    color: antiquewhite;
+}
+
+.navbar-toggler-icon {
+    background-color: hsl(21, 40%, 27%);
+}
+
+.navbar {
+    background-color: beige;
+}
+
+.nav-link {
+    color: #623E2A;
+    font-size: 1rem;
+    font: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: hsl(21, 40%, 27%);
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: hsl(21, 40%, 27%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main img {
+    width: -webkit-fill-available;
+}
+
+.wel {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 3.2em;
+    font-weight: 700;
+    font-style: normal;
+    color: hsl(21, 40%, 27%)
+}
+
+.button1 {
+    background-color: #623E2A;
+    color: white;
+    font-size: 20px;
+    padding: 30px 50px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    width: 240px;
+}
+
+.button1:hover {
+    background-color: #401f0b;
+    cursor: pointer;
+}
+
+.button5 {
+    background-color: #623E2A;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button5:hover {
+    background-color: #401f0b;
+    cursor: pointer;
+}
+
+.welcome span {
+    color: hsl(21, 40%, 27%)
+}
+
+
+.room-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.room-type {
+    margin: 10px;
+    text-align: center;
+    width: 25%;
+}
+
+.room-type h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.room-type img {
+    width: 100%;
+    height: auto;
+}
+
+.room-type p {
+    margin-top: 10px;
+}
+
+/* category */
+.room-container {
+    padding: 20px;
+}
+
+.room {
+    margin-bottom: 30px;
+    border: 1px solid rgb(212, 194, 194);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    height: 380px;
+
+}
+
+.room:hover img {
+    opacity: 0.7;
+    /* Reduce opacity of the image on hover */
+}
+
+.room img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 5px
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.details {
+    font-size: 16px;
+    color: #666;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+
+.villa-info {
+    background-color: #EFEBE5;
+    /* เปลี่ยนสีพื้นหลังของ .villa-info */
+    border: 1px solid #623E2A;
+    border-radius: 9px;
+    padding: 60px;
+    width: 100%;
+    height: 900px;
+
+}
+
+.price-range {
+    color: #623E2A;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 10px;
+    color: #623E2A;
+    font-size: 16px;
+}
+
+.amenities {
+    margin-top: 20px;
+}
+
+.amenities ul h5 {
+    color: #623E2A;
+}
+
+.amenities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amenities li {
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #623E2A;
+    position: relative;
+}
+
+.amenities li::before {
+    content: "\2022";
+    color: #623E2A;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+.villa-image img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.details {
+    font-size: 14px;
+}
+
+.abt{
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: black;
+}
+/* จัดหัวข้อให้อยู่กึ่งกลาง */
+.villa-name {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #623E2A;
+}
+
+/* จัดรูปให้อยู่กึ่งกลางซ้าย */
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.button5 {
+    background-color: #623E2A;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button5:hover {
+    background-color: #401f0b;
+    cursor: pointer;
+}
+
+/* bil */
+
+
+.img-ab {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* ทำให้รูปเป็นวงกลม */
+    margin: 5px;
+}
+
+.container-ab p {
+    font-size: 24px;
+    color: #9c6c6c;
+    line-height: 1.6;
+}
+
+.container-ab p strong {
+    font-weight: bold;
+    color: #514040;
+}
+
+.border-box {
+    border: 1px solid #ccc;
+    height: 500px;
+    border-radius: 5px;
+
+    padding: 20px;
+
+}
+
+.pad {
+    padding: 20px;
+
+}
+
+.form-control,
+.btn,
+select {
+    margin-top: 5px;
+
+}
+
+#show1,
+#show2,
+#show3,
+#show4,
+#show5,
+#show6,
+#show7 {
+    background-color: #F4ECE1;
+    /* สีเบจคอล หรือ beige */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาเล็กๆ เพื่อให้ดูน่าสนใจขึ้น */
+}
+
+/* เพิ่มสีข้อความ */
+#show1,
+#show2,
+#show3,
+#show5,
+#show6,
+#show7 {
+    color: #623E2A;
+    /* สีน้ำตาลอ่อน */
+    font-size: 16px;
+}
+
+/* เพิ่มสีข้อความของ #show4 */
+#show4 {
+    color: #28a745;
+    /* สีเขียว */
+    font-size: 18px;
+    /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้นเล็กน้อย */
+}
+
+.billing-container {
+    display: flex;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.billing-image {
+    flex: 1;
+    width: 100%;
+    /* Width to fill the container */
+    height: 250px;
+    /* Fixed height for all images */
+    object-fit: cover;
+    /* Ensures the image covers the area without distorting aspect ratio */
+    border-radius: 5px;
+}
+
+.billing-form {
+    flex: 2;
+    /* Allocate more space for the form than the image */
+}
+
+.card-header {
+    background-color: #623E2A;
+    /* Light blue background */
+    border-bottom: 1px solid #623E2A;
+    /* Slightly darker blue for a subtle border */
+    color: rgb(216, 215, 215);
+    /* White text color */
+}
+.carousel-item img {
+    height: 500px; /* ปรับความสูงตามที่ต้องการ */
+    object-fit: cover; /* สำหรับปรับขนาดรูปให้พอดีกับพื้นที่ของ Carousel */
+    margin: 10px;
+}
+.h3-fonthb {
+    font-size: 48px;
+    color: #623E2A;
+    text-align: center;
+  }
+
+  .h4-fonthb {
+    font-size: 24px;
+    color: #d89c23;
+    text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .img-fluidhb{
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .page-item.active .page-link{
+    color: beige;
+    background-color: brown;
+    border-color: beige;
+  }
+
+  .page-link{
+    color: brown;
+  }
+
+  .page-link:hover{
+    color: beige;
+    background-color: lightcoral;
+  }
+
+
